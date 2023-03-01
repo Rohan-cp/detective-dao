@@ -1,0 +1,21 @@
+{
+  "name": "my-dao",
+  "version": "3.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@thirdweb-dev/react": "^3.5.1",
+    "@thirdweb-dev/sdk": "^3.5.1",
+    "@vitejs/plugin-react": "^2.0.0",
+    "ethers": "^5.6.6",
+    "react": "^18.0.2",
+    "react-dom": "^18.0.2",
+    "vite": "^3.1.4"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3"
+  }
+}
