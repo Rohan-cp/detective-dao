@@ -1,4 +1,5 @@
 import { useAddress, useMetamask, useDisconnect, useContract, useNFTBalance, Web3Button, useNetwork } from '@thirdweb-dev/react';
+import { ChainId } from '@thirdweb-dev/sdk';
 import { useState, useEffect, useMemo } from 'react';
 import { AddressZero } from "@ethersproject/constants";
 
@@ -139,17 +140,17 @@ const memberList = useMemo(() => {
   });
 }, [memberAddresses, memberTokenAmounts]);
 
-if (address && (network?.[0].data.chain.id !== ChainId.Goerli)) {
-  return (
-    <div className="unsupported-network">
-      <h2>Please connect to Goerli</h2>
-      <p>
-        This dapp only works on the Goerli network, please switch networks
-        in your connected wallet.
-      </p>
-    </div>
-  );
-}
+  if (address && (network?.[0].data.chain.id !== ChainId.Goerli)) {
+    return (
+      <div className="unsupported-network">
+        <h2>Please connect to Goerli</h2>
+        <p>
+          This dapp only works on the Goerli network, please switch networks
+          in your connected wallet.
+        </p>
+      </div>
+    );
+  }
 
   // This is the case where the user hasn't connected their wallet
   // to your web app. Let them call connectWallet.
@@ -157,18 +158,19 @@ if (address && (network?.[0].data.chain.id !== ChainId.Goerli)) {
     return (
       <div className="landing">
         <h1>Welcome to DetectiveDAO</h1>
-        <div onClick={connectWithMetamask} className="btn-hero">
-          Connect Your Wallet
-        </div>
+        <button onClick={connectWithMetamask} className="btn-hero">
+          Join us!
+        </button>
       </div>
     );
   }
 
+  const [ proposalVotes, setProposalVotes ] = useState({})
+
   if (hasClaimedNFT) {
     return (
       <div className="member-page">
-        <h1>🍪DAO Member Page</h1>
-        <p>Congratulations on being a member</p>
+        <h2>DetectiveDAO Member Page</h2>
         <div>
           <div>
             <h2>Member List</h2>
@@ -300,7 +302,7 @@ if (address && (network?.[0].data.chain.id !== ChainId.Goerli)) {
                   </div>
                 </div>
               ))}
-              <button disabled={isVoting || hasVoted} type="submit">
+              <button disabled={isVoting || hasVoted} type="submit" className="base-button">
                 {isVoting
                   ? 'Voting...'
                   : hasVoted
