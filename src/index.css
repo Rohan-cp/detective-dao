@@ -115,6 +115,12 @@ h1 {
   justify-content: space-between;
 }
 
+.member-page form .propsal-card > div {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
 .member-page form small {
   text-align: center;
 }
@@ -127,35 +133,23 @@ h1 {
   box-shadow: 3.1px 6.2px 6.2px hsl(0deg 0% 0% / 0.4);
 }
 
-.base-button {
-  cursor: pointer;
-  background-color: #000;
-  color: #fff;
-  border: none;
-  font-weight: bold;
-  font-family: inherit;
-  padding: 1.2rem 2rem;
-  text-transform: uppercase;
-  border-radius: 3rem;
-  font-size: 1.2rem;
+.proposal-card {
+  background-color: #B2B7FF;
+  padding: 10px;
+  border-radius: 1rem;
+  color: #000;
+  box-shadow: 3.1px 6.2px 6.2px hsl(0deg 0% 0% / 0.4);
 }
 
-.base-button:hover {
-  background-color: #121212;
-}
-
-.base-buttonbutton:focus {
-  background-color: #222;
-}
-
-.base-buttonbutton:disabled {
-  opacity: 0.8;
-  pointer-events: none;
-}
 
 .btn-hero {
   border: 0;
   padding: .5em 1em;
   font-size: 1rem;
   background-image: linear-gradient(45def, red, blue);
+}
+
+.description {
+  color: "red";
+  font-weight: "400";
 }

@@ -2,6 +2,7 @@ import { useAddress, useMetamask, useDisconnect, useContract, useNFTBalance, Web
 import { ChainId } from '@thirdweb-dev/sdk';
 import { useState, useEffect, useMemo } from 'react';
 import { AddressZero } from "@ethersproject/constants";
+import SubmitButton from "./components/SubmitButton.jsx"
 
 const App = () => {
   // Use the hooks thirdweb give us.
@@ -281,8 +282,8 @@ const memberList = useMemo(() => {
               }}
             >
               {proposals.map((proposal) => (
-                <div key={proposal.proposalId} className="card">
-                  <h5>{proposal.description}</h5>
+                <div key={proposal.proposalId} className="proposal-card">
+                  <div className="description">{proposal.description}</div>
                   <div>
                     {proposal.votes.map(({ type, label }) => (
                       <div key={type}>
@@ -302,13 +303,13 @@ const memberList = useMemo(() => {
                   </div>
                 </div>
               ))}
-              <button disabled={isVoting || hasVoted} type="submit" className="base-button">
+              <SubmitButton disabled={isVoting || hasVoted} type="submit">
                 {isVoting
                   ? 'Voting...'
                   : hasVoted
                   ? 'You Already Voted'
                   : 'Submit Votes'}
-              </button>
+              </SubmitButton>
               {!hasVoted && (
                 <small>
                   This will trigger multiple transactions that you will need to
