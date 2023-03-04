@@ -7,8 +7,10 @@ A fully-functional DAO built on the Goerli Testnet (our token is $INK) that allo
 -vote on proposals that can be executed on chain by any member \
 -interact with community
 
-<img src="https://imgur.com/ZMWX1m0.png" width="600">
-<img src="https://imgur.com/wIRJpga.png" width="600">
+85% of the supply of $INK has been transferred to the treasury.
+
 <img src="https://imgur.com/KZBpwFn.png" width="600">
+<img src="https://imgur.com/wIRJpga.png" width="600">
+<img src="https://imgur.com/ZMWX1m0.png" width="600">
 <img src="https://imgur.com/UA2Lpp3.png" width="400">
 
