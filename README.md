@@ -10,3 +10,5 @@ A fully-functional DAO built on the Goerli Testnet (our token is $INK) that allo
 <img src="https://imgur.com/ZMWX1m0.png" width="600">
 <img src="https://imgur.com/wIRJpga.png" width="600">
 <img src="https://imgur.com/KZBpwFn.png" width="600">
+<img src="https://imgur.com/UA2Lpp3.png" width="400">
+
