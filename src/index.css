@@ -11,19 +11,23 @@
   )
 }
 
+.base {  
+  display: flex;
+}
+
 html,
 body {
-  margin: 0;
+  display: flex;
+  height: 100vh;
+  width: 100wh;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
   font-family: Inter, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #000000;
   color: #fff;
-  overflow-x: hidden;
-}
-#root {
-  min-height: 100vh;
-  display: flex;
 }
 
 h1 {
@@ -55,7 +59,14 @@ h1 {
   background-color: #f00;
 }
 
-.landing,
+.landing-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+
+
 .connect-wallet,
 .mint-nft,
 .member-page {

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const SubmitButton = (props) => {
+const JoinUsButton = (props) => {
   const [bgColor, setBgColour] = useState("white");
   const [textColor, setTextColor] = useState("black");
   return (
@@ -11,10 +11,11 @@ const SubmitButton = (props) => {
         color: textColor,
         borderRadius: "25px",
         border: 0,
-        width: 208,
+        width: 150,
         height: 40,
         cursor: "pointer",
         textAlign: "center",
+        fontSize: 15,
         ...props.style
       }}
       onMouseEnter={() => {
@@ -31,4 +32,4 @@ const SubmitButton = (props) => {
   );
 };
 
-export default SubmitButton;
+export default JoinUsButton;
