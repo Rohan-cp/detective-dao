@@ -64,9 +64,11 @@ const MemberScreen = ({
                   </div>
                 </div>
               ))}
-              <SubmitButton disabled={isSubmitDisabled} type="submit">
+              <div className="submitButtonContainer" >
+                <SubmitButton disabled={isSubmitDisabled} type="submit">
                 {submitText}
               </SubmitButton>
+              </div>
               {!hasVoted && (
                 <small>
                   This will trigger multiple transactions that you will need to

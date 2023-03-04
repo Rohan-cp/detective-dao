@@ -161,6 +161,12 @@ h1 {
 }
 
 .description {
-  color: "red";
-  font-weight: "400";
+  font-weight: bold;
+  font-size: 14;
+}
+
+.submitButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
