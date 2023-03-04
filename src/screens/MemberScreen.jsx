@@ -51,8 +51,12 @@ const MemberScreen = ({
                   <div>
                     {proposal.votes.map(({ type, label }) => (
                   <VoteButton
-                    onClick={() => handleVoteSelection(proposal.proposalId, type)}>
-                    {<label htmlFor={proposal.proposalId + '-' + type}>
+                    onClick={() => {
+                      handleVoteSelection(proposal.proposalId, type)
+                    }}
+                    key={proposal.proposalId + '-' + type}
+                  >
+                    {<label id={proposal.proposalId + '-' + type}>
                           {label}
                     </label>}
                   </VoteButton>

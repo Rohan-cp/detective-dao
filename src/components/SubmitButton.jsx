@@ -5,7 +5,6 @@ const SubmitButton = (props) => {
   const [textColor, setTextColor] = useState("black");
   return (
     <button
-      onClick={props.onClick}
       style={{
         backgroundColor: bgColor,
         color: textColor,

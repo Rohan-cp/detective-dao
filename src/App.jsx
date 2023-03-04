@@ -18,6 +18,7 @@ const App = () => {
   const network = useNetwork();
   const [ proposalVotes, setProposalVotes ] = useState({});
   const handleVoteSelection = (proposalId, type) => {
+    console.log("(proposalId, type)", proposalId, type)
     setProposalVotes((currProposalVotes) => ({
       ...currProposalVotes,
       proposalId: type
@@ -171,14 +172,14 @@ const App = () => {
       };
       proposal.votes.forEach((vote) => {
         const elem = document.getElementById(
-        proposal.proposalId + '-' + vote.type,
-      );
-
-      if (elem.checked) {
-        voteResult.vote = vote.type;
-          return;
-        }
-      });
+          proposal.proposalId + '-' + vote.type,
+        ).htmlFor;
+        console.log("proposal.proposalId + '-' + vote.type", proposal.proposalId + '-' + vote.type)
+        if (elem.checked) {
+          voteResult.vote = vote.type;
+            return;
+          }
+        });
       return voteResult;
     });
 
@@ -269,7 +270,8 @@ console.log("11111111 -------->")
       <MemberScreen 
         memberList={memberList} 
         onSubmit={onSubmitVotesHandler} 
-        proposals={proposals} 
+        handleVoteSelection={handleVoteSelection}
+        proposals={proposals}
         isSubmitDisabled={isVoting || hasVoted}
         submitText={isVoting ? 'Voting...' : hasVoted ? 'You Already Voted' : 'Submit Votes'}
         hasVoted={hasVoted}
