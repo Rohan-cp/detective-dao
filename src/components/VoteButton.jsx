@@ -17,7 +17,7 @@ const VoteButton = (props) => {
         borderRadius: "25px",
         border: 0,
         width: 100,
-        height: 40, 
+        height: 35, 
         marginRight: "48px",
         cursor: "pointer",
         textAlign: "center",

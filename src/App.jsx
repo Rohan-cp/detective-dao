@@ -251,21 +251,13 @@ const App = () => {
     );
   }
 
-  
-
   if (!address) {
-    console.log("howww address", address)
     return (
       <WelcomeScreen connectWithMetamask={connectWithMetamask}/>
     );
   }
-
-  console.log("STARTTTTT -------->")
-
   
-console.log("11111111 -------->")
   if (hasClaimedNFT) {
-    console.log("XXXXXXXXXX -------->")
     return (
       <MemberScreen 
         memberList={memberList} 
@@ -278,7 +270,7 @@ console.log("11111111 -------->")
       />
     );
   }
-  console.log("ZZZZZZZZZZ -------->")
+  
    // Render mint nft screen.
   return (
     <MintNftScreen contractAddress={editionDropAddress} />
