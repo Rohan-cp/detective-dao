@@ -4,7 +4,7 @@ Visit here to join! [DetectiveDAO](https://detective-dao.rohanprashanth.repl.co/
 A fully-functional DAO built on the Goerli Testnet (our token is $INK) that allows: \
 -connecting your wallet with MetaMask \
 -mint your free NFT to get access to the DetectiveDAO member page \
--vote on proposals that can be executed on chain by any member if passed \
+-vote on proposals, via blockchain, that can be executed on chain by any member if passed \
 -interact with community
 
 85% of the supply of $INK has been transferred to the treasury.
