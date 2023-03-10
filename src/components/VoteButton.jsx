@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const VoteButton = (props) => {
   const [isSelected, setIsSelected] = useState(props.isSelected);
 
+  useEffect(() => {
+    setIsSelected(props.isSelected)
+  }, [props.isSelected])
+  
   const onClickHandler = () => {
     setIsSelected(currIsSelected => !currIsSelected)
     props.onClick()

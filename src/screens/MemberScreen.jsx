@@ -5,16 +5,19 @@ import VoteButton from "../components/VoteButton.jsx"
 const MemberScreen = ({
   memberList,
   onSubmit,
+  proposalVotes,
   proposals,
   handleVoteSelection,
   isSubmitDisabled,
   submitText,
+  setProposalVoteCheck,
   hasVoted
 }) => {
   const shortenAddress = (str) => {
     return str.substring(0, 6) + '...' + str.substring(str.length - 4);
   };
-  console.log("here")
+  
+  console.log("proposalVotes -------->", proposalVotes)
   return (
     <div className="member-page">
       <h2>DetectiveDAO Member Page</h2>
@@ -55,6 +58,7 @@ const MemberScreen = ({
                       handleVoteSelection(proposal.proposalId, type)
                     }}
                     key={proposal.proposalId + '-' + type}
+                    isSelected={proposalVotes[proposal.proposalId] == type}
                   >
                     {
                     <label id={proposal.proposalId + '-' + type}>

@@ -10,8 +10,8 @@ const SubmitButton = (props) => {
         color: textColor,
         borderRadius: "25px",
         border: 0,
-        width: 208,
-        height: 40,
+        width: 140,
+        height: 37,
         cursor: "pointer",
         textAlign: "center",
         ...props.style

@@ -21,7 +21,7 @@ const App = () => {
     console.log("(proposalId, type)", proposalId, type)
     setProposalVotes((currProposalVotes) => ({
       ...currProposalVotes,
-      proposalId: type
+      [proposalId]: type
     }))
   }
   
@@ -155,7 +155,7 @@ const App = () => {
       };
     });
   }, [memberAddresses, memberTokenAmounts]);
-
+  const [proposalVoteCheck, setProposalVoteCheck] = useState({})
   const onSubmitVotesHandler = async (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -261,20 +261,23 @@ const App = () => {
     return (
       <MemberScreen 
         memberList={memberList} 
-        onSubmit={onSubmitVotesHandler} 
+        onSubmit={onSubmitVotesHandler}
+        proposalVotes={proposalVotes}
         handleVoteSelection={handleVoteSelection}
         proposals={proposals}
         isSubmitDisabled={isVoting || hasVoted}
         submitText={isVoting ? 'Voting...' : hasVoted ? 'You Already Voted' : 'Submit Votes'}
         hasVoted={hasVoted}
+        setProposalVoteCheck={setProposalVoteCheck}
       />
     );
   }
   
-   // Render mint nft screen.
+  // Render mint nft screen.
   return (
     <MintNftScreen contractAddress={editionDropAddress} />
   );
+  
 }
 
 export default App;
