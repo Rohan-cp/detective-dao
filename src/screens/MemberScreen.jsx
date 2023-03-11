@@ -17,7 +17,6 @@ const MemberScreen = ({
     return str.substring(0, 6) + '...' + str.substring(str.length - 4);
   };
   
-  console.log("proposalVotes -------->", proposalVotes)
   return (
     <div className="member-page">
       <h2>DetectiveDAO Member Page</h2>
@@ -59,21 +58,19 @@ const MemberScreen = ({
                     }}
                     key={proposal.proposalId + '-' + type}
                     isSelected={proposalVotes[proposal.proposalId] == type}
-                  >
-                    {
-                    <label id={proposal.proposalId + '-' + type}>
-                          {label}
-                    </label>
-                    }
-                  </VoteButton>
+                    inputId={proposal.proposalId + '-' + type}
+                    proposalId={proposal.proposalId}
+                    type={type}
+                    label={label}
+                  />
                 ))}
                   </div>
                 </div>
               ))}
               <div className="submitButtonContainer" >
-                <SubmitButton disabled={isSubmitDisabled} type="submit">
-                {submitText}
-              </SubmitButton>
+                <SubmitButton isDisabled={isSubmitDisabled}>
+                  {submitText}
+                </SubmitButton>
               </div>
               {!hasVoted && (
                 <small>

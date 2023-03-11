@@ -173,8 +173,7 @@ const App = () => {
       proposal.votes.forEach((vote) => {
         const elem = document.getElementById(
           proposal.proposalId + '-' + vote.type,
-        ).htmlFor;
-        console.log("proposal.proposalId + '-' + vote.type", proposal.proposalId + '-' + vote.type)
+        );
         if (elem.checked) {
           voteResult.vote = vote.type;
             return;
@@ -256,7 +255,7 @@ const App = () => {
       <WelcomeScreen connectWithMetamask={connectWithMetamask}/>
     );
   }
-  
+  console.log("isVoting", isVoting)
   if (hasClaimedNFT) {
     return (
       <MemberScreen 
