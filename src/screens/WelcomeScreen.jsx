@@ -16,7 +16,9 @@ const WelcomeScreen = (props) => {
     }}>
         <p style={{
           fontSize: 45,
-        }} >The one and only DetectiveDAO</p>
+        }} >
+          The one and only DetectiveDAO
+        </p>
         <JoinUsButton onClick={props.connectWithMetamask}>
           {"Join Us!"}
          </JoinUsButton>

@@ -44,13 +44,11 @@ const MemberScreen = ({
         </div>
         <div>
           <h2>Active Proposals</h2>
-          <form
-            onSubmit={onSubmit}
-          >
+          <div className="voting-form">
           {proposals.map((proposal) => (
             <div key={proposal.proposalId} className="proposal-card">
               <div className="description">{proposal.description}</div>
-                <div>
+                <div className="voting-btn-container">
                   {proposal.votes.map(({ type, label }) => (
                   <VoteButton
                     onClick={() => {
@@ -68,17 +66,19 @@ const MemberScreen = ({
                 </div>
               ))}
               <div className="submitButtonContainer" >
-                <SubmitButton isDisabled={isSubmitDisabled}>
+                <SubmitButton isDisabled={isSubmitDisabled} onClick={onSubmit}>
                   {submitText}
                 </SubmitButton>
               </div>
               {!hasVoted && (
+              <div className="bottom-text">
                 <small>
                   This will trigger multiple transactions that you will need to
                   sign.
                 </small>
+              </div>
               )}
-            </form>
+            </div>
           </div>
         </div>
     </div>

@@ -179,6 +179,7 @@ const App = () => {
             return;
           }
         });
+      
       return voteResult;
     });
 
@@ -236,6 +237,7 @@ const App = () => {
       // in *either* case we need to set the isVoting state to false to enable the button again
       setIsVoting(false);
     }
+    console.log("submitting! ------>")
   }
   
 
@@ -256,7 +258,7 @@ const App = () => {
       <WelcomeScreen connectWithMetamask={connectWithMetamask}/>
     );
   }
-  console.log("isVoting", isVoting)
+  
   if (hasClaimedNFT) {
     return (
       <MemberScreen 

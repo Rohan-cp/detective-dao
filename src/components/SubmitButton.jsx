@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const SubmitButton = (props) => {
-  const { isDisabled } = props
+  const { isDisabled, onClick } = props
   const [bgColor, setBgColour] = useState("white");
   const [textColor, setTextColor] = useState("black");
   return (
@@ -26,7 +26,7 @@ const SubmitButton = (props) => {
         setTextColor("black");
       }}
       disabled={isDisabled}
-      type="submit"
+      onClick={onClick}
     >
       {props.children}
     </button>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const VoteButton = (props) => {
-  const [isSelected, setIsSelected] = useState(props.isSelected);
+  const [ isSelected, setIsSelected ] = useState(props.isSelected);
   const { inputId, proposalId, type, label } = props
   useEffect(() => {
     setIsSelected(props.isSelected)
@@ -12,9 +12,7 @@ const VoteButton = (props) => {
     props.onClick()
   }
   
-  return (
-    
-      
+  return (  
     <button
       onClick={onClickHandler}
       style={{
@@ -25,7 +23,6 @@ const VoteButton = (props) => {
         width: 100,
         height: 35,
         cursor: "pointer",
-        marginRight: "48px",
         textAlign: "center",
         ...props.style
       }}
@@ -35,8 +32,7 @@ const VoteButton = (props) => {
         borderRadius: "25px",
         border: 0,
         width: 100,
-        height: 35, 
-        marginRight: "48px",
+        height: 35,
         cursor: "pointer",
         textAlign: "center",
         ...props.style
