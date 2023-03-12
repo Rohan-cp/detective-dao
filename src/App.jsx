@@ -237,6 +237,7 @@ const App = () => {
       setIsVoting(false);
     }
   }
+  
 
   if (address && (network?.[0].data.chain.id !== ChainId.Goerli)) {
     return (
@@ -271,10 +272,8 @@ const App = () => {
       />
     );
   }
-  
-  // Render mint nft screen.
   return (
-    <MintNftScreen contractAddress={editionDropAddress} />
+    <MintNftScreen contractAddress={editionDropAddress} editionDrop={editionDrop} />
   );
   
 }

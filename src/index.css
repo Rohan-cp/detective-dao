@@ -68,7 +68,6 @@ h1 {
 
 
 .connect-wallet,
-.mint-nft,
 .member-page {
   flex-direction: column;
   width: 960px;
@@ -79,6 +78,13 @@ h1 {
   align-content: center;
   display: flex;
   text-align: center;
+}
+
+.mint-nft {
+  display: flex;
+   flex-direction: column;
+  align-content: center;
+  justify-content: center;
 }
 
 .member-page > div {
@@ -154,10 +160,7 @@ h1 {
 
 
 .btn-hero {
-  border: 0;
-  padding: .5em 1em;
   font-size: 1rem;
-  background-image: linear-gradient(45def, red, blue);
 }
 
 .description {
