@@ -1,7 +1,7 @@
 # DetectiveDAO (built with [buildspace](https://buildspace.so/) x [thirdweb](https://thirdweb.com/dashboard))
 Visit here to join! [DetectiveDAO](https://detective-dao.rohanprashanth.repl.co/)
 
-A fully-functional DAO built on the Goerli Testnet (our token is $INK) that allows: \
+A fully-functional DAO built on the Goerli Testnet that allows: \
 -connecting your wallet with MetaMask \
 -mint your free NFT to get access to the DetectiveDAO member page \
 -vote on proposals, via blockchain, that can be executed on chain by any member if passed \
